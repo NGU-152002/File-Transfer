@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="./assets/icons/website-logo.ico" type="image/x-icon">  
+    <link rel="stylesheet" href="./style.css">
+    <title>File Transfer</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <!-- <div class="logo"><img src="./assets/icons/website-logo.png" alt=""></div> -->
+        <div class="logo"><img src="./assets/icons/website-logo.png" alt="Wesite Logo"></div>
+        <ul class="nav-links">
+            <li>About</li>
+            <li>How to Use</li>
+            <li>Privacy</li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="file-uploading-area">
+            <form action="" method="post" enctype="multipart/form-data" id="id-file-form">
+                <input type="file" class="upload-file" name="file" hidden>
+            </form>
+            
+            <div class="upload-file-option" id="id-upload-file-option">Select File</div>
+            <button class="submit-file-btn" id="id-submit-file-btn">Upload</button>
+        </div>
+
+        <div class="files-uploaded-area" id="id-files-uploaded-area">
+            <!-- <div class="file-info">
+                <div class="file-logo"><img src="./assets/icons/file-icon.svg" width="35em" height="35em" alt="file logo" /></div>
+                <span>
+                    <div class="file-name">12.png</div>
+                    <div class="file-size">12 KB</div>
+                </span>
+                <div class="copy-link-svg"><img src="./assets/icons/copy-link-icon.svg" width="35em" height="35em" alt="copy link"></div>
+            </div> -->
+        </div>
+    </div>
+    
+    
+    <script src="./script.js"></script>
+    <script>
+        function copyLink(e){
+            // alert(e)
+            console.log(e);
+            let url = `http://192.168.0.108:3000/download/${e}`;
+            navigator.clipboard.writeText(url);
+        }
+    </script>
+</body>
+</html>

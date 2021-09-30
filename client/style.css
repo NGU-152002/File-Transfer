@@ -1,0 +1,138 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family:sans-serif;
+
+}
+
+body{
+    background-color:rgb(255, 249, 249);
+}
+
+/* .span{
+    width:100%;
+    overflow-y:hidden;
+    overflow-x:auto;
+    height:100%;
+} */
+
+.nav-bar{
+    color:white;
+    background-color:rgb(61, 61, 61);
+    padding-top:2em;
+    padding-bottom:2em;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    position:absolute;
+    width:4em;
+    top:1%;
+    
+}
+
+.nav-links{
+    display:flex;
+}
+
+.nav-links li{
+    font-size:.7rem;
+    margin-right:2em;
+    list-style-type:none;
+    font-weight:bold;
+}
+
+.container{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.file-uploading-area{
+    /* width:30em; */
+    width:auto;
+    padding:0em 15em;
+    height:10em;
+    border:2px dashed grey;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+   
+}
+@media (max-width:425px) {
+    .file-uploading-area{
+    width:auto;
+    padding:0em 9em;
+    height:10em;
+    border:2px dashed grey;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    }
+}
+.upload-file-option{
+    position:absolute;
+    top:30%;
+    /* width:fit-content; */
+    padding:.5em;
+    border-radius:5px;
+    border:1px solid grey;
+    cursor:pointer;
+}
+
+.upload-file-option:hover{
+    background-color:rgb(216, 216, 216);
+    
+}
+
+.file-uploading-area button{
+    position:relative;
+    outline:none;
+    border:1px solid grey;
+    background:none;
+    border-radius:5px;
+    padding:10px 20px;
+    position:absolute;
+    margin-top:8em;
+    cursor:pointer;
+}
+
+.file-uploading-area button:hover{
+    background-color:black;
+    color:white;
+}
+
+.files-uploaded-area{
+    border:2px solid grey;
+    width:100%;
+    height:15em;
+    overflow-y:auto;
+    margin-top:13em;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.file-info{
+    overflow:hidden;
+    display:flex;
+    padding:1em;
+    margin:.3em;
+    border-radius:10px;
+    background-color:rgb(226, 226, 226);
+}
+
+.file-info span{
+    width:80%;
+    padding-left:10px;
+}
+
+.copy-link-svg img{
+    color:white;
+    cursor:pointer;
+}
